@@ -28,10 +28,11 @@ async function getAllPosts(page, searchTerm) {
         skip: skip,
         where,
         orderBy: {
-          createdAt: 'desc'
+          id: 'desc'
         },
         include: {
-          author: true
+          author: true,
+          comments: true
         }
       })
     // logger.info('Posts obtidos com sucesso')
